@@ -6,7 +6,7 @@ InboxSDK.load('1', 'Hello World!').then(function(sdk){
 		// a compose view has come into existence, do something with it!
 		composeView.addButton({
 			title: "My Nifty Button!",
-			iconUrl: 'http://www.w3schools.com/html/html5.gif',
+			iconUrl: 'https://www.streak.com/images/logoLight.png',
 			onClick: function(event) {
 				event.composeView.insertTextIntoBodyAtCursor('Hello World!');
 			},
