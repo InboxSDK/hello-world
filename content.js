@@ -1,3 +1,5 @@
+import * as InboxSDK from '@inboxsdk/core';
+
 InboxSDK.load(2, "Hello World!").then((sdk) => {
   // the SDK has been loaded, now do something with it!
   sdk.Compose.registerComposeViewHandler((composeView) => {
