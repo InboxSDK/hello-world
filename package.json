@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "description": "InboxSDK test extension",
   "private": true,
-  "source": "content.js",
   "browserslist": "last 4 Chrome versions",
   "scripts": {
-    "start": "parcel watch",
-    "build": "parcel build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rimraf dist",
+    "build": "webpack --config webpack.dev.js",
+    "build-prod": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -21,10 +20,13 @@
   },
   "homepage": "https://github.com/InboxSDK/hello-world#readme",
   "dependencies": {
-    "@inboxsdk/core": "^0.1.2"
+    "@inboxsdk/core": "^0.2.1"
   },
   "devDependencies": {
-    "parcel": "^2.0.1",
-    "parcel-reporter-static-files-copy": "^1.3.1"
+    "copy-webpack-plugin": "^10.2.0",
+    "rimraf": "^3.0.2",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-merge": "^5.8.0"
   }
 }

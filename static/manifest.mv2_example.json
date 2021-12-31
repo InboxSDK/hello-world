@@ -12,13 +12,12 @@
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "scripts": ["background.js"],
+    "persistent": false
   },
+  "web_accessible_resources": [ "pageWorld.js" ],
   "permissions": [
-    "scripting"
-  ],
-  "host_permissions": [
     "https://mail.google.com/"
   ],
-  "manifest_version": 3
+  "manifest_version": 2
 }
