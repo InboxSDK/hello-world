@@ -20,5 +20,13 @@
   "host_permissions": [
     "https://mail.google.com/"
   ],
+   "web_accessible_resources": [
+    {
+      "resources": ["pageWorld.js"],
+      "matches": [
+        "https://mail.google.com/*"
+      ]
+    }
+  ],
   "manifest_version": 3
 }
