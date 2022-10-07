@@ -21,10 +21,10 @@
   },
   "homepage": "https://github.com/InboxSDK/hello-world#readme",
   "dependencies": {
-    "@inboxsdk/core": "^0.2.1"
+    "@inboxsdk/core": "^0.2.16"
   },
   "devDependencies": {
-    "copy-webpack-plugin": "^10.2.0",
+    "copy-webpack-plugin": "^11.0.0",
     "rimraf": "^3.0.2",
     "webpack": "^5.65.0",
     "webpack-cli": "^4.9.1",
