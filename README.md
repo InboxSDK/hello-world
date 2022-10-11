@@ -1,3 +1,7 @@
+# InboxSDK Example Extension
+
+<img width="582" alt="readme-example" src="https://user-images.githubusercontent.com/577345/195166155-cb2b35aa-b998-4f21-ad08-5ec1ad851f10.png">
+
 ## Instructions
 
 1. Run `npm install` to install dependencies.
