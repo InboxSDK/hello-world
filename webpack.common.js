@@ -9,6 +9,15 @@ module.exports = {
     pageWorld: '@inboxsdk/core/pageWorld.js',
     background: '@inboxsdk/core/background.js',
   },
+  module: {
+    rules: [
+      {
+        test: /\.m?jsx?$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      }
+    ]
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
