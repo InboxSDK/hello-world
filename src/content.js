@@ -1,7 +1,10 @@
 import * as InboxSDK from '@inboxsdk/core';
 import { Configuration, OpenAIApi } from "openai";
 
-const apiKey = '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';
+envVariables= process.env
+const {API_OPEN} = envVariables
+const apiKey = API_OPEN;
+console.log(apiKey)
 
 async function generateText(prompt) {
   
@@ -21,8 +24,9 @@ async function generateText(prompt) {
      })
   });
   const json = await response.json();
-  console.log(json.choices.text)
   console.log(json)
+  console.log(json.choices.text)
+
   console.log(json.choices)
   console.log(json.choices["0"].text)
 
@@ -54,6 +58,8 @@ InboxSDK.load(2, "Hello World!", { timeout: 30000 }).then((sdk) => {
           // Get the value of the prompt input field
           const prompt = form.querySelector('#prompt').value;
 
+          console.log(prompt)
+        
           // Declare the response variable
           let response;
           // Generate the email response
@@ -61,15 +67,14 @@ InboxSDK.load(2, "Hello World!", { timeout: 30000 }).then((sdk) => {
           console.log("m")
           console.log(response)
           console.log("i")
-
-          form.remove();
-          console.log(response)
+        
           // Insert the email response into the compose view
           event.composeView.insertHTMLIntoBodyAtCursor(`<div>${response}</div>`);
-
-          
-          
+        
+          form.remove();
+          console.log(response)
         });
+        
       },
    
 
