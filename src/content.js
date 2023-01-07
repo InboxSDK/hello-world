@@ -1,9 +1,11 @@
 import * as InboxSDK from '@inboxsdk/core';
 import { Configuration, OpenAIApi } from "openai";
 
-envVariables= process.env
-const {API_OPEN} = envVariables
-const apiKey = API_OPEN;
+
+//envVariables= process.env
+//const {API_OPEN} = envVariables
+const apiKey = "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"
+//const apiKey = API_OPEN;
 console.log(apiKey)
 
 async function generateText(prompt) {
@@ -69,15 +71,12 @@ InboxSDK.load(2, "Hello World!", { timeout: 30000 }).then((sdk) => {
           console.log("i")
         
           // Insert the email response into the compose view
-          event.composeView.insertHTMLIntoBodyAtCursor(`<div>${response}</div>`);
-        
-          form.remove();
+          event.composeView.setBodyText(response);
+          console.log("mmmmm")
           console.log(response)
+          form.remove();
         });
-        
-      },
-   
-
+      }
     });
   });
 });
