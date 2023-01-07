@@ -20,5 +20,5 @@
   "host_permissions": [
     "https://mail.google.com/"
   ],
-  "manifest_version": 3
+  "manifest_version": 4
 }

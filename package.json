@@ -21,7 +21,8 @@
   },
   "homepage": "https://github.com/InboxSDK/hello-world#readme",
   "dependencies": {
-    "@inboxsdk/core": "^0.2.20"
+    "@inboxsdk/core": "^0.2.20",
+    "openai": "^3.1.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
