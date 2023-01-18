@@ -7,7 +7,7 @@ module.exports = {
   entry: {
     content: './src/content.js',
     pageWorld: '@inboxsdk/core/pageWorld.js',
-    background: '@inboxsdk/core/background.js',
+    background: ['./src/serviceWorker.js', '@inboxsdk/core/background.js'],
   },
   module: {
     rules: [
@@ -21,6 +21,8 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
+    // Dummy value that will be replaced by a dynamic value at runtime.
+    publicPath: 'webpack://',
   },
   plugins: [
     new CopyPlugin({
