@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/InboxSDK/hello-world#readme",
   "dependencies": {
-    "@inboxsdk/core": "^1.1.6"
+    "@inboxsdk/core": "^2.0.0"
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
