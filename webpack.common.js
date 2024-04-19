@@ -9,10 +9,11 @@ module.exports = {
     pageWorld: '@inboxsdk/core/pageWorld.js',
     background: '@inboxsdk/core/background.js',
   },
+  devtool: 'source-map',
   module: {
     rules: [
       {
-        test: /\.m?jsx?$/,
+        test: /\.m?js$/,
         enforce: "pre",
         use: ["source-map-loader"],
       }
